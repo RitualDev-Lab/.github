@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 <!-- Layer 1: continuously-twinkling strip -->
 <img src="https://capsule-render.vercel.app/api?type=transparent&color=0:7C3AED,100:00D4FF&height=40&section=header&animation=twinkling" width="100%"/>
@@ -184,6 +184,26 @@ Experience interactive, browser-native tools with zero ads and zero signups:
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/RitualDev-Lab/.github/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake" width="90%"/>
+</div>
+
+---
+
+## 💖 Sponsor & Support via Dodo Payments
+
+All RitualDev-Lab developer security tools, MCP servers, and directories are 100% open-source, local-first, and zero-paywall. Your sponsorship directly finances multi-platform CI/CD runners, automated security regression suites, and cloud testing infrastructure.
+
+<div align="center">
+
+[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor_via_Dodo-Payments-8b5cf6?style=for-the-badge&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
+[![Interactive Donation Portal](https://img.shields.io/badge/Donation_Portal-Cards%20%7C%20UPI%20%7C%20Apple%20Pay-ff5964?style=for-the-badge&logo=heart&logoColor=white)](https://ritualdev.in/donate)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-RitualDev--Lab-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/RitualDev-Lab)
+
+<br/>
+
+[**⚡ 1-Click Dodo Payments Checkout**](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva) &nbsp;•&nbsp; [**🎁 Interactive Donation Form (USD & INR UPI)**](https://ritualdev.in/donate) &nbsp;•&nbsp; [**❤️ GitHub Sponsors**](https://github.com/sponsors/RitualDev-Lab)
+
+<sub>🔒 *Zero physical shipping required. Powered by Dodo Payments (Merchant of Record) with instant tax invoice and global payment methods (Cards, UPI, Apple Pay).*</sub>
+
 </div>
 
 ---
