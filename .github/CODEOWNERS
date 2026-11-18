@@ -1,0 +1,5 @@
+# Default RitualDev-Lab Organization Code Owners
+# All security policies, GitHub Actions workflows, and release manifests require maintainer review.
+* @salemalem
+/.github/ @salemalem
+SECURITY.md @salemalem

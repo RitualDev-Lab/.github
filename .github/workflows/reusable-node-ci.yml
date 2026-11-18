@@ -1,0 +1,69 @@
+name: Reusable Node.js CI Gate
+
+on:
+  workflow_call:
+    inputs:
+      package-manager:
+        description: "Package manager to use ('pnpm' or 'npm')"
+        type: string
+        default: "pnpm"
+      node-version:
+        description: "Node.js major version"
+        type: string
+        default: "22"
+      run-lint:
+        description: "Run lint script before tests"
+        type: boolean
+        default: true
+      run-build:
+        description: "Run build script before tests"
+        type: boolean
+        default: true
+      run-test:
+        description: "Run test script"
+        type: boolean
+        default: true
+
+permissions: read-all
+
+jobs:
+  node-ci:
+    name: Node ${{ inputs.node-version }} (${{ inputs.package-manager }})
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup pnpm
+        if: inputs.package-manager == 'pnpm'
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: ${{ inputs.package-manager }}
+
+      - name: Install dependencies (pnpm)
+        if: inputs.package-manager == 'pnpm'
+        run: pnpm install --frozen-lockfile
+
+      - name: Install dependencies (npm)
+        if: inputs.package-manager == 'npm'
+        run: npm ci
+
+      - name: Lint
+        if: inputs.run-lint
+        run: ${{ inputs.package-manager }} run lint
+
+      - name: Build
+        if: inputs.run-build
+        run: ${{ inputs.package-manager }} run build
+
+      - name: Test
+        if: inputs.run-test
+        run: ${{ inputs.package-manager }} test
